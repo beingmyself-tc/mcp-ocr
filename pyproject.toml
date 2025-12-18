@@ -1,17 +1,14 @@
 [project]
 name = "mcp-ocr"
 version = "0.1.0"
-description = "MCP Server for HunyuanOCR"
+description = "MCP Server for OCR using Qwen2-VL"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "mcp>=1.0.0",
-    "torch",
-    "transformers",
+    "mlx-vlm",
     "pillow",
-    "accelerate",
-    "sentencepiece",
-    "pdf2image"
+    "pdf2image",
 ]
 
 [project.scripts]
@@ -20,3 +17,6 @@ mcp-ocr = "mcp_ocr.server:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true

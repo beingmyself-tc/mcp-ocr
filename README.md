@@ -93,12 +93,21 @@ Make sure to replace `/absolute/path/to/mcp-ocr` with the actual path to your cl
 
 ### `ocr_image`
 Performs OCR on a single image file.
-- **Input**: `image_path` (string) - Absolute path to the image file (e.g., .jpg, .png).
+- **Input**: 
+  - `image_path` (string) - Absolute path to the image file (e.g., .jpg, .png).
+  - `mode` (string, optional) - Processing mode:
+    - `"ocr"` (default): Detect text and output coordinates.
+    - `"format"`: Extract text/tables/formulas in Markdown/HTML/LaTeX.
+    - `"formula"`: Extract formulas in LaTeX.
+    - `"table"`: Extract tables in HTML.
+    - `"translation"`: Extract and translate to English.
 - **Output**: Extracted text.
 
 ### `ocr_pdf`
 Performs OCR on a PDF file.
-- **Input**: `pdf_path` (string) - Absolute path to the PDF file.
+- **Input**: 
+  - `pdf_path` (string) - Absolute path to the PDF file.
+  - `mode` (string, optional) - Same modes as `ocr_image`.
 - **Output**: Extracted text (concatenated pages).
 
 ## License

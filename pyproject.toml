@@ -10,7 +10,8 @@ dependencies = [
     "transformers",
     "pillow",
     "accelerate",
-    "sentencepiece"
+    "sentencepiece",
+    "pdf2image"
 ]
 
 [project.scripts]

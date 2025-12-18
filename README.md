@@ -12,6 +12,10 @@ A Model Context Protocol (MCP) server that provides local OCR capabilities using
 
 - Python 3.10+
 - `uv` (recommended) or `pip`
+- `poppler` (required for PDF support)
+  - macOS: `brew install poppler`
+  - Ubuntu: `sudo apt-get install poppler-utils`
+  - Windows: Download and add to PATH
 
 ## Installation
 
@@ -88,9 +92,9 @@ Make sure to replace `/absolute/path/to/mcp-ocr` with the actual path to your cl
 ## Tools
 
 ### `ocr_image`
-Performs OCR on a local image file.
-- **Input**: `image_path` (string) - Absolute path to the image.
-- **Output**: Extracted text.
+Performs OCR on a local image file or PDF.
+- **Input**: `image_path` (string) - Absolute path to the image or PDF file.
+- **Output**: Extracted text (concatenated pages for PDF).
 
 ## License
 

@@ -92,9 +92,14 @@ Make sure to replace `/absolute/path/to/mcp-ocr` with the actual path to your cl
 ## Tools
 
 ### `ocr_image`
-Performs OCR on a local image file or PDF.
-- **Input**: `image_path` (string) - Absolute path to the image or PDF file.
-- **Output**: Extracted text (concatenated pages for PDF).
+Performs OCR on a single image file.
+- **Input**: `image_path` (string) - Absolute path to the image file (e.g., .jpg, .png).
+- **Output**: Extracted text.
+
+### `ocr_pdf`
+Performs OCR on a PDF file.
+- **Input**: `pdf_path` (string) - Absolute path to the PDF file.
+- **Output**: Extracted text (concatenated pages).
 
 ## License
 

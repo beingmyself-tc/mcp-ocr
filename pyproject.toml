@@ -1,0 +1,21 @@
+[project]
+name = "mcp-ocr"
+version = "0.1.0"
+description = "MCP Server for HunyuanOCR"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "torch",
+    "transformers",
+    "pillow",
+    "accelerate",
+    "sentencepiece"
+]
+
+[project.scripts]
+mcp-ocr = "mcp_ocr.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

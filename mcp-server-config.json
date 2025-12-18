@@ -1,0 +1,9 @@
+{
+  "mcp-ocr": {
+    "command": "/Users/seb/code/mcp-ocr/.venv/bin/python",
+    "args": [
+      "-m",
+      "mcp_ocr.server"
+    ]
+  }
+}

@@ -51,7 +51,7 @@ Add the following to your `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "hunyuan-ocr": {
+    "mcp-ocr": {
       "command": "uv",
       "args": [
         "--directory",
@@ -64,9 +64,26 @@ Add the following to your `claude_desktop_config.json`:
 }
 ```
 
-### Configuring with VS Code (MCP Extension)
+### Configuring with VS Code
 
-If you are using an MCP extension in VS Code, configure it similarly to point to the `mcp-ocr` executable or run via `uv`.
+To use this MCP server with VS Code, add the following to your global MCP settings file (typically `~/Library/Application Support/Code/User/mcp.json` on macOS):
+
+```json
+{
+  "servers": {
+    "mcp-ocr": {
+      "type": "stdio",
+      "command": "/absolute/path/to/mcp-ocr/.venv/bin/python",
+      "args": [
+        "-m",
+        "mcp_ocr.server"
+      ]
+    }
+  }
+}
+```
+
+Make sure to replace `/absolute/path/to/mcp-ocr` with the actual path to your cloned repository.
 
 ## Tools
 
